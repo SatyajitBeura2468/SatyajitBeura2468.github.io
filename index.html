@@ -71,6 +71,8 @@
             margin-top: 1rem;
             letter-spacing: 2px;
             text-transform: uppercase;
+            text-align: center;
+            padding: 0 20px;
         }
         .loader-bar {
             width: 200px; height: 2px;
@@ -245,7 +247,7 @@
         /* --- CARDS GRID --- */
         .grid-works {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -401,9 +403,49 @@
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .glitch-text { font-size: 2.5rem; -webkit-text-stroke: 0px; color: #fff; }
-            .cursor, .cursor-dot { display: none; } /* No custom cursor on mobile */
-            .dock { width: 90%; justify-content: space-around; }
+            * { cursor: auto !important; } /* Reset cursor for mobile */
+            .glitch-text { 
+                font-size: 12vw; /* Responsive font size */
+                -webkit-text-stroke: 0px; 
+                color: #fff; 
+            }
+            .cursor, .cursor-dot { display: none; } /* Hide custom cursor */
+            .dock { 
+                width: 90%; 
+                justify-content: space-around;
+                bottom: 1.5rem;
+                padding: 12px 10px;
+            }
+            .wrapper {
+                padding: 0 1.5rem;
+            }
+            .section-header {
+                margin-top: 5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .section-number {
+                display: none;
+            }
+            .grid-works {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .work-card {
+                padding: 1.5rem;
+                min-height: auto;
+            }
+            .hero-profile {
+                width: 80px; height: 80px;
+            }
+            .nav-top {
+                top: 1.5rem; left: 1.5rem; right: 1.5rem;
+            }
+            .footer {
+                margin-top: 6rem;
+                padding-bottom: 7rem;
+            }
         }
     </style>
 </head>
