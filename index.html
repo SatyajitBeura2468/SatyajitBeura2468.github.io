@@ -3,206 +3,303 @@
 <head>
     <meta name="google-site-verification" content="5XmzNvAxJfyASw71AP86fz3FnRqD2bIzI519VN-0XIs" />
     
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Satyajit Beura | Researcher in Physics & AI | Portfolio</title>
-    <meta name="description" content="Portfolio of Satyajit Beura, a Class 11 Student Researcher (Arjuna NEET) in Odisha. Developing 'Dimensional Memory Encoding' (DME) and environmental solutions like Pollution Eating Paint.">
-    <meta name="keywords" content="Satyajit Beura, SatyajitBeura2468, DME Theory, Dimensional Memory Encoding, Pollution Eating Paint, Physics Wallah Student, Odisha Scientist, Three.js Developer, Mock Parliament Script">
+    <!-- PRIMARY SEO: Mastering Search Rankings -->
+    <title>Satyajit Beura | Theoretical Physics Researcher & AI Developer</title>
+    <meta name="description" content="Official research portfolio of Satyajit Beura. Exploring Dimensional Memory Encoding (DME), Theoretical Physics, and AI-driven scientific simulations.">
+    <meta name="keywords" content="Satyajit Beura, DME Theory, Dimensional Memory Encoding, Physics Wallah, Arjuna NEET, Student Researcher Odisha, Quantum Physics India">
     <meta name="author" content="Satyajit Beura">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Satyajit Beura - Student Researcher">
-    <meta property="og:description" content="Exploring the edge of Physics and AI. Creator of the DME Theory.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/142953684?v=4">
+    <!-- OPEN GRAPH: Social Media Optimization -->
+    <meta property="og:title" content="Satyajit Beura | Student Researcher">
+    <meta property="og:description" content="Bridging the gap between Theoretical Physics and Cognitive Science.">
     <meta property="og:url" content="https://satyajitbeura2468.github.io/">
-    <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://satyajitbeura2468.github.io/Satyajit%20Beura%20Pro%20Profile.jpeg">
+    <meta property="og:type" content="website">
 
+    <!-- JSON-LD SCHEMA: The Scientific Identity Connector -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Satyajit Beura",
-      "alternateName": ["SatyajitBeura2468", "Satya Bhai"],
       "url": "https://satyajitbeura2468.github.io",
-      "image": "https://avatars.githubusercontent.com/u/142953684?v=4",
+      "image": "https://satyajitbeura2468.github.io/Satyajit%20Beura%20Pro%20Profile.jpeg",
       "sameAs": [
         "https://github.com/SatyajitBeura2468",
-        "https://thegyanicommunity.blogspot.com",
-        "https://www.linkedin.com/in/satyajit-beura" 
+        "https://medium.com/@satyajitbeura/dimensional-memory-encoding-dme-a-theoretical-introduction-fb9a692ce704",
+        "https://orcid.org/0009-0006-4471-2845",
+        "https://scholar.google.com/citations?user=qfMUiigAAAAJ&hl=en"
       ],
       "jobTitle": "Student Researcher",
       "worksFor": {
         "@type": "Organization",
         "name": "Physics Wallah (Arjuna NEET)"
       },
-      "alumniOf": {
-        "@type": "HighSchool",
-        "name": "Odisha Adarsha Vidyalaya"
-      },
-      "homeLocation": {
-        "@type": "Place",
-        "name": "Bhawanipatna, Odisha, India"
-      },
-      "knowsAbout": ["Physics", "Dimensional Memory Encoding", "DME", "Artificial Intelligence", "Three.js", "Astrophysics", "Bernoulli's Principle"]
+      "description": "Student researcher focused on the intersection of Theoretical Physics and Artificial Intelligence.",
+      "knowsAbout": ["DME Theory", "Quantum Mechanics", "AI Simulations", "Astrophysics"]
     }
     </script>
 
     <style>
-        /* CLEAN, FAST, MOBILE-FRIENDLY CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
         :root {
-            --primary-color: #0056b3;
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-            --card-bg: #ffffff;
+            --bg: #030712;
+            --surface: #0f172a;
+            --accent: #60a5fa;
+            --accent-glow: rgba(96, 165, 250, 0.4);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --glass: rgba(15, 23, 42, 0.7);
         }
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        .ambient-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%);
+            pointer-events: none;
+            z-index: -1;
         }
 
-        header {
-            text-align: center;
-            padding: 40px 0;
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+        header { text-align: center; margin-bottom: 5rem; }
+        
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
         }
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
+        .profile-img { 
+            width: 170px; 
+            height: 170px; 
+            border-radius: 50%; 
+            border: 3px solid var(--accent);
+            padding: 5px;
+            background: var(--bg);
+            box-shadow: 0 0 40px var(--accent-glow);
             object-fit: cover;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-position: center top;
         }
 
-        h1 {
-            margin: 15px 0 5px;
-            color: #111;
+        h1 { 
+            font-size: 2.8rem; 
+            font-weight: 700; 
+            letter-spacing: -0.02em; 
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to bottom, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .tagline {
-            color: #666;
-            font-size: 1.1em;
-            font-weight: 500;
+        .role-tag {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
         }
 
-        section {
-            background: var(--card-bg);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        .metadata {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
         }
 
-        h2 {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            color: #222;
+        section { margin-top: 4.5rem; }
+        
+        h2 { 
+            font-size: 1.4rem; 
+            font-weight: 600; 
+            margin-bottom: 1.8rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+            color: var(--text-main);
         }
 
-        .project-item {
-            margin-bottom: 20px;
+        h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.2rem;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 1.5rem;
         }
 
-        .project-title {
-            font-weight: bold;
-            font-size: 1.1em;
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
             display: block;
-            margin-bottom: 5px;
         }
 
-        a {
-            color: var(--primary-color);
+        .card-subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .verification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 1.2rem;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 500;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .link-button:hover {
+            background: rgba(96, 165, 250, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
         }
+
+        .btn-primary {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.8rem;
+            background: var(--accent);
+            color: var(--bg);
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover { transform: scale(1.03); }
 
         footer {
+            margin-top: 8rem;
+            padding-bottom: 4rem;
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            font-size: 0.9em;
-            color: #777;
+            border-top: 1px solid var(--border);
+            padding-top: 3rem;
+        }
+
+        footer p { color: var(--text-dim); font-size: 0.85rem; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .metadata { flex-direction: column; gap: 5px; }
+            .container { padding: 2rem 1.2rem; }
         }
     </style>
 </head>
 <body>
 
+    <div class="ambient-glow"></div>
+
     <div class="container">
+        
         <header>
-            <img src="https://avatars.githubusercontent.com/u/142953684?v=4" alt="Satyajit Beura Researcher Profile" class="profile-img">
+            <div class="profile-container">
+                <!-- IMPORTANT: Image name handles spaces with %20 -->
+                <img src="Satyajit%20Beura%20Pro%20Profile.jpeg" alt="Satyajit Beura" class="profile-img" onerror="this.src='https://avatars.githubusercontent.com/u/142953684?v=4'">
+            </div>
+            <p class="role-tag">Student Researcher</p>
             <h1>Satyajit Beura</h1>
-            <p class="tagline">Student | Researcher | Creative Coder</p>
-            <p style="font-size: 0.9em;"><i>Bhawanipatna, Odisha, India</i></p>
+            <div class="metadata">
+                <span>📍 Bhawanipatna, Odisha</span>
+                <span>⚛️ Arjuna NEET (PW)</span>
+                <span>👨‍💻 AI & Physics</span>
+            </div>
         </header>
 
         <section id="about">
-            <h2>The Making of a Mind</h2>
-            <p>
-                Hi, I'm Satyajit. I am a Class 11 student in the <strong>Arjuna NEET</strong> batch, but my interests go far beyond the standard curriculum. 
-                I exist at the intersection of <strong>Advanced Physics</strong> and <strong>Computer Science</strong>.
-            </p>
-            <p>
-                My goal is to merge theoretical science with visual technology. Whether it's coding simulations in Three.js or developing new scientific theories, 
-                I believe in "Trying To Do Better" every single day.
-            </p>
+            <h2>The Human Perspective</h2>
+            <div class="card">
+                <p>Hello! I am Satyajit. While I am officially a Class 11 student preparing for the medical entrance exams, my true passion lies in deciphering the mathematical blueprints of reality.</p>
+                <br>
+                <p>I focus on <strong>Theoretical Physics</strong> and <strong>Scientific Visualizations</strong>. I believe that complex theories shouldn't just be hidden in papers.. they should be simulated and seen. My current focus is the DME Theory and solving local environmental challenges through chemistry. <i>Trying to do better.</i></p>
+            </div>
         </section>
 
         <section id="research">
-            <h2>Research & Projects</h2>
+            <h2>Research & Innovation</h2>
             
-            <div class="project-item">
-                <span class="project-title">1. Dimensional Memory Encoding (DME)</span>
-                <p>
-                    I am developing a theoretical framework called <strong>DME</strong>. It explores the possibility that human memory and consciousness might rely on 
-                    encoding data across dimensional boundaries, utilizing principles of quantum mechanics. I am currently refining a paper on this topic.
-                </p>
+            <div class="card">
+                <span class="card-subtitle">Theoretical Framework</span>
+                <span class="card-title">Dimensional Memory Encoding (DME)</span>
+                <p>Exploring the hypothesis that memory data might be encoded across higher-dimensional manifolds using quantum principles. Published as a preliminary study for peer discussion.</p>
+                <a href="https://zenodo.org/records/17943112" class="btn-primary" target="_blank">View Paper on Zenodo</a>
             </div>
 
-            <div class="project-item">
-                <span class="project-title">2. Pollution Eating Paint</span>
-                <p>
-                    A project focused on environmental engineering. I worked on designing a chemical compound that can be added to wall paint to absorb and neutralize 
-                    harmful air pollutants. This project was developed for the National Science Exhibition.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <span class="project-title">3. AI & Visual Simulations</span>
-                <p>
-                    I use code to visualize the invisible. My recent work includes interactive simulations of <strong>fluid dynamics (Bernoulli's Principle)</strong> 
-                    and creating surreal digital art that blends sci-fi themes with scientific accuracy.
-                </p>
+            <div class="card">
+                <span class="card-subtitle">Applied Science</span>
+                <span class="card-title">Pollution Eating Paint</span>
+                <p>A chemical engineering project designed to neutralize ambient nitrogen oxides (NOx) using a specialized paint additive. Developed for the National Science Exhibition.</p>
             </div>
         </section>
 
-        <section id="connect">
-            <h2>Find Me Online</h2>
-            <p>I am always open to discussing Physics, AI, or new ideas.</p>
-            <ul>
-                <li><strong>GitHub:</strong> <a href="https://github.com/SatyajitBeura2468">github.com/SatyajitBeura2468</a></li>
-                <li><strong>Blog:</strong> <a href="https://thegyanicommunity.blogspot.com">The Gyani Community</a></li>
-            </ul>
+        <section id="verification">
+            <h2>Academic Verification</h2>
+            <div class="verification-grid">
+                <a href="https://scholar.google.com/citations?user=qfMUiigAAAAJ&hl=en" class="link-button" target="_blank">
+                    <span>🎓</span> Google Scholar
+                </a>
+                <a href="https://orcid.org/0009-0006-4471-2845" class="link-button" target="_blank">
+                    <span>🆔</span> ORCID iD
+                </a>
+                <a href="https://github.com/SatyajitBeura2468" class="link-button" target="_blank">
+                    <span>💻</span> GitHub Profile
+                </a>
+                <a href="https://medium.com/@satyajitbeura/dimensional-memory-encoding-dme-a-theoretical-introduction-fb9a692ce704" class="link-button" target="_blank">
+                    <span>✍️</span> Medium Blog
+                </a>
+            </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Satyajit Beura. Built to explore.</p>
+            <p>&copy; 2025 Satyajit Beura. Dedicated to the advancement of science.</p>
+            <p style="margin-top: 10px; font-style: italic;">"From Bhawanipatna to the Cosmos."</p>
         </footer>
+
     </div>
 
 </body>
