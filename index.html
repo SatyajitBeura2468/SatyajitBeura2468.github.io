@@ -261,6 +261,8 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 320px;
+            text-decoration: none; /* FIX: Removes underline */
+            color: var(--primary); /* FIX: Ensures text color is correct */
         }
 
         /* Hover Reveal Effect */
@@ -580,6 +582,9 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
+                    } else {
+                        // User requested animations to "rehappen"
+                        entry.target.classList.remove('active'); 
                     }
                 });
             }, { threshold: 0.1 });
