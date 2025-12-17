@@ -2,318 +2,690 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="5XmzNvAxJfyASw71AP86fz3FnRqD2bIzI519VN-0XIs" />
-    
+
      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- PRIMARY SEO: Mastering Search Rankings -->
-    <title>Satyajit Beura | Theoretical Physics Researcher & AI Developer</title>
-    <meta name="description" content="Official research portfolio of Satyajit Beura from Odisha. Exploring Dimensional Memory Encoding (DME), Theoretical Physics, and AI-driven scientific simulations.">
-    <meta name="keywords" content="Satyajit Beura, DME Theory, Dimensional Memory Encoding, Student Researcher Odisha, Quantum Physics India, Artificial Intelligence">
+    <!-- SEO & METADATA -->
+    <title>Satyajit Beura | The Interface</title>
+    <meta name="description" content="Advanced research terminal of Satyajit Beura. Theoretical Physics (DME), AI Simulations, and Environmental Engineering.">
+    <meta name="keywords" content="Satyajit Beura, DME Theory, Physics Researcher, AI, Quantum Mechanics, Odisha, Three.js">
     <meta name="author" content="Satyajit Beura">
-    <meta name="robots" content="index, follow">
-
-    <!-- OPEN GRAPH: Social Media Optimization -->
+    
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="Satyajit Beura | Student Researcher">
-    <meta property="og:description" content="Bridging the gap between Theoretical Physics and Cognitive Science.">
+    <meta property="og:description" content="Visualizing the invisible. Theoretical Physics & AI.">
     <meta property="og:url" content="https://satyajitbeura2468.github.io/">
     <meta property="og:image" content="https://satyajitbeura2468.github.io/Satyajit%20Beura%20Pro%20Profile.jpeg">
     <meta property="og:type" content="website">
 
-    <!-- JSON-LD SCHEMA: The Scientific Identity Connector -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Satyajit Beura",
-      "url": "https://satyajitbeura2468.github.io",
-      "image": "https://satyajitbeura2468.github.io/Satyajit%20Beura%20Pro%20Profile.jpeg",
-      "sameAs": [
-        "https://github.com/SatyajitBeura2468",
-        "https://medium.com/@satyajitbeura/dimensional-memory-encoding-dme-a-theoretical-introduction-fb9a692ce704",
-        "https://orcid.org/0009-0006-4471-2845",
-        "https://scholar.google.com/citations?user=qfMUiigAAAAJ&hl=en"
-      ],
-      "jobTitle": "Student Researcher",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Physics Wallah"
-      },
-      "description": "Student researcher focused on the intersection of Theoretical Physics and Artificial Intelligence.",
-      "knowsAbout": ["DME Theory", "Quantum Mechanics", "AI Simulations", "Astrophysics"]
-    }
-    </script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
         :root {
-            --bg: #030712;
-            --surface: #0f172a;
-            --accent: #60a5fa;
-            --accent-glow: rgba(96, 165, 250, 0.4);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --bg: #030305;
+            --primary: #ffffff;
+            --secondary: #888888;
+            --accent: #3b82f6; /* Electric Blue */
+            --accent-dim: rgba(59, 130, 246, 0.1);
+            --glass: rgba(20, 20, 20, 0.6);
             --border: rgba(255, 255, 255, 0.08);
-            --glass: rgba(15, 23, 42, 0.7);
+            --ease: cubic-bezier(0.19, 1, 0.22, 1);
+            --cursor-size: 20px;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* --- RESET & BASE --- */
+        *, *::after, *::before { box-sizing: border-box; margin: 0; padding: 0; cursor: none; /* Custom Cursor enabled */ }
         
-        body { 
-            background-color: var(--bg); 
-            color: var(--text-main); 
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg);
+            color: var(--primary);
             font-family: 'Inter', sans-serif;
-            line-height: 1.7;
             overflow-x: hidden;
+            width: 100vw;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .ambient-glow {
+        /* --- PRELOADER --- */
+        .preloader {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
-
-        header { text-align: center; margin-bottom: 5rem; }
-        
-        .profile-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-        .profile-img { 
-            width: 170px; 
-            height: 170px; 
-            border-radius: 50%; 
-            border: 3px solid var(--accent);
-            padding: 5px;
             background: var(--bg);
-            box-shadow: 0 0 40px var(--accent-glow);
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        h1 { 
-            font-size: 2.8rem; 
-            font-weight: 700; 
-            letter-spacing: -0.02em; 
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to bottom, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .role-tag {
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
-        .metadata {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-
-        section { margin-top: 4.5rem; }
-        
-        h2 { 
-            font-size: 1.4rem; 
-            font-weight: 600; 
-            margin-bottom: 1.8rem; 
-            display: flex; 
-            align-items: center; 
-            gap: 15px;
-            color: var(--text-main);
-        }
-
-        h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-        .card {
-            background: var(--glass);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2.2rem;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-bottom: 1.5rem;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 0.8rem;
-            display: block;
-        }
-
-        .card-subtitle {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-dim);
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .verification-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1rem;
-        }
-
-        .link-button {
+            z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 1.2rem;
-            background: var(--glass);
+            flex-direction: column;
+            transition: opacity 0.8s var(--ease);
+        }
+        .loader-text {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .loader-bar {
+            width: 200px; height: 2px;
+            background: rgba(255,255,255,0.1);
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-progress {
+            position: absolute; top: 0; left: 0; height: 100%; width: 0%;
+            background: var(--accent);
+            transition: width 0.5s linear;
+        }
+
+        /* --- CUSTOM CURSOR --- */
+        .cursor {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--cursor-size); height: var(--cursor-size);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+            mix-blend-mode: difference;
+        }
+        .cursor-dot {
+            position: fixed;
+            top: 0; left: 0;
+            width: 4px; height: 4px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10001;
+            transform: translate(-50%, -50%);
+        }
+        /* Magnetic Effect State */
+        body.hovering .cursor {
+            width: 50px; height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            backdrop-filter: blur(2px);
+        }
+
+        /* --- BACKGROUND FX --- */
+        #starfield {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 900;
+        }
+
+        /* --- LAYOUT --- */
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- NAVIGATION --- */
+        .nav-top {
+            position: fixed;
+            top: 2rem; left: 2rem; right: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            mix-blend-mode: difference;
+        }
+        .logo {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .status {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .status::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 4rem;
+        }
+
+        .hero-profile {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        .hero-profile img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s var(--ease);
+        }
+        .hero-profile:hover img { transform: scale(1.1); }
+
+        .glitch-text {
+            font-family: 'Syncopate', sans-serif;
+            font-weight: 700;
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+            position: relative;
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+        .glitch-text:hover { color: #fff; }
+        
+        .hero-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            color: var(--secondary);
+            max-width: 600px;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+        .hero-sub strong { color: #fff; font-weight: 500; }
+
+        /* --- SCROLL SECTIONS --- */
+        .section-header {
+            margin-top: 8rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* --- CARDS GRID --- */
+        .grid-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border);
             border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.2s;
+            padding: 2.5rem;
+            transition: transform 0.4s var(--ease), background 0.4s;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
         }
 
-        .link-button:hover {
-            background: rgba(96, 165, 250, 0.1);
-            border-color: var(--accent);
+        /* Hover Reveal Effect */
+        .work-card::before {
+            content: '';
+            position: absolute;
+            top: var(--y, 0); left: var(--x, 0);
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .work-card:hover::before { opacity: 1; }
+        .work-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.2); }
+
+        .badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
             color: var(--accent);
-        }
-
-        .btn-primary {
+            border: 1px solid var(--accent-dim);
+            padding: 4px 8px;
+            border-radius: 4px;
             display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.8rem 1.8rem;
-            background: var(--accent);
-            color: var(--bg);
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform 0.2s;
+            margin-bottom: 1.5rem;
         }
 
-        .btn-primary:hover { transform: scale(1.03); }
+        .work-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .work-desc {
+            color: var(--secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .btn-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+        .btn-text::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0; width: 0%; height: 1px;
+            background: var(--accent);
+            transition: width 0.3s var(--ease);
+        }
+        .work-card:hover .btn-text::after { width: 100%; }
 
         .teaser {
-            margin-top: 3rem;
+            margin-top: 4rem;
             text-align: center;
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            font-weight: 500;
+            color: var(--secondary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            opacity: 0.8;
+            font-style: italic;
         }
 
-        footer {
-            margin-top: 5rem;
-            padding-bottom: 4rem;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            padding-top: 3rem;
+        /* --- DOCK NAVIGATION --- */
+        .dock {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            padding: 12px 20px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        footer p { color: var(--text-dim); font-size: 0.85rem; }
+        .dock-icon {
+            width: 44px; height: 44px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            color: #888;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.25, 1.5, 0.5, 1); /* Bouncy spring */
+            position: relative;
+        }
+        
+        .dock-icon:hover {
+            transform: translateY(-10px) scale(1.2);
+            color: #fff;
+            background: var(--accent);
+            box-shadow: 0 5px 15px var(--accent-glow);
+        }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .metadata { flex-direction: column; gap: 5px; }
-            .container { padding: 2rem 1.2rem; }
+        /* Tooltips */
+        .dock-icon::before {
+            content: attr(aria-label);
+            position: absolute;
+            top: -35px; left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            background: #fff; color: #000;
+            font-size: 0.7rem; font-family: 'Inter', sans-serif; font-weight: 600;
+            padding: 4px 8px; border-radius: 4px;
+            opacity: 0; pointer-events: none;
+            transition: 0.2s;
+        }
+        .dock-icon:hover::before { opacity: 1; transform: translateX(-50%) scale(1); }
+
+        /* --- FOOTER --- */
+        .footer {
+            margin-top: 10rem;
+            padding-bottom: 8rem;
+            text-align: center;
+            opacity: 0.4;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        /* --- UTILS --- */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--ease); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .glitch-text { font-size: 2.5rem; -webkit-text-stroke: 0px; color: #fff; }
+            .cursor, .cursor-dot { display: none; } /* No custom cursor on mobile */
+            .dock { width: 90%; justify-content: space-around; }
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-glow"></div>
+    <!-- SYSTEM PRELOADER -->
+    <div class="preloader">
+        <div class="loader-text">INITIALIZING...</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
 
-    <div class="container">
+    <!-- MOUSE FX -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="noise-overlay"></div>
+    <canvas id="starfield"></canvas>
+
+    <!-- FIXED UI -->
+    <nav class="nav-top">
+        <div class="logo">SB-25</div>
+        <div class="status">OPERATIONAL</div>
+    </nav>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="wrapper">
         
-        <header>
-            <div class="profile-container">
-                <!-- IMPORTANT: Image name handles spaces with %20 -->
-                <img src="Satyajit%20Beura%20Pro%20Profile.jpeg" alt="Satyajit Beura" class="profile-img" onerror="this.src='https://avatars.githubusercontent.com/u/142953684?v=4'">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-profile reveal">
+                <!-- IMPORTANT: Image name matches your repo -->
+                <img src="Satyajit%20Beura%20Pro%20Profile.jpeg" alt="Satyajit Beura" onerror="this.src='https://avatars.githubusercontent.com/u/142953684?v=4'">
             </div>
-            <p class="role-tag">Student Researcher</p>
-            <h1>Satyajit Beura</h1>
-            <div class="metadata">
-                <span>📍 Bhawanipatna, Odisha</span>
-                <span>⚛️ Class 11 Student</span>
-                <span>👨‍💻 AI & Physics</span>
-            </div>
-        </header>
-
-        <section id="about">
-            <h2>Hi, I'm Satyajit.</h2>
-            <div class="card">
-                <p>I am a student from Odisha with a lot of questions. The kind of questions that don't usually have answers in the back of the textbook.</p>
-                <br>
-                <p>Like everyone else, I'm preparing for my entrance exams. But late at night, when the books are closed, I'm usually coding simulations or trying to break the laws of physics. At least theoretically.</p>
-                <br>
-                <p>I don't just want to memorize science. I want to build it. Whether it's coding AI or designing new chemical compounds, I'm obsessed with figuring out how the universe actually works.</p>
-            </div>
-        </section>
-
-        <section id="research">
-            <h2>My Works (just yet)</h2>
             
-            <div class="card">
-                <span class="card-subtitle">Theory</span>
-                <span class="card-title">Dimensional Memory Encoding (DME)</span>
-                <p>Science tells us memory is just neurons firing. But what if it's not? What if gravity and quantum mechanics are hiding our memories in higher dimensions? I know. It sounds crazy. That's why I wrote a paper to explore the math behind it.</p>
-                <a href="https://zenodo.org/records/17943112" class="btn-primary" target="_blank">Read The Paper</a>
-            </div>
-
-            <div class="card">
-                <span class="card-subtitle">Applied Science</span>
-                <span class="card-title">Pollution Eating Paint</span>
-                <p>I got tired of seeing the pollution in our cities. So I asked a simple question: why can't the walls clean the air? I used chemistry to design a paint concept that absorbs harmful gases. It’s not just a project. It’s a necessity.</p>
-            </div>
-
-            <!-- The Hook -->
-            <p class="teaser">And this is just what I can show you. There's a lot more going on in the background. I'm just getting started. 😉</p>
-        </section>
-
-        <section id="verification">
-            <h2>Connect & Verify</h2>
-            <div class="verification-grid">
-                <a href="https://scholar.google.com/citations?user=qfMUiigAAAAJ&hl=en" class="link-button" target="_blank">
-                    <span>🎓</span> Google Scholar
-                </a>
-                <a href="https://orcid.org/0009-0006-4471-2845" class="link-button" target="_blank">
-                    <span>🆔</span> ORCID iD
-                </a>
-                <a href="https://github.com/SatyajitBeura2468" class="link-button" target="_blank">
-                    <span>💻</span> GitHub Profile
-                </a>
-                <a href="https://medium.com/@satyajitbeura/dimensional-memory-encoding-dme-a-theoretical-introduction-fb9a692ce704" class="link-button" target="_blank">
-                    <span>✍️</span> Medium Blog
-                </a>
+            <h1 class="glitch-text reveal" data-text="SATYAJIT BEURA">SATYAJIT BEURA</h1>
+            
+            <div class="hero-sub reveal">
+                Class 11 Student from <strong>Odisha</strong>. <br>
+                Decoding reality with <strong>Physics</strong> & <strong>AI</strong>. <br>
+                Curious about the things we don't understand yet.
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2025 Satyajit Beura. Built with curiosity.</p>
-            <p style="margin-top: 10px; font-style: italic;">"From Bhawanipatna to the Cosmos."</p>
+        <!-- ABOUT -->
+        <div class="section-header reveal">
+            <span class="section-title">Hi, I'm Satyajit</span>
+            <span class="section-number">01</span>
+        </div>
+        <div class="reveal" style="max-width: 800px; margin-bottom: 4rem;">
+            <p style="font-size: 1.5rem; line-height: 1.6; color: #ccc;">
+                I am a student from Odisha. <span style="color: var(--accent);">Like everyone else, I'm grinding for entrance exams.</span>
+            </p>
+            <br>
+            <p style="font-size: 1.1rem; color: #888; line-height: 1.7;">
+                But my curiosity doesn't stop at the syllabus. I don't just want to solve problems in a workbook; I want to solve them in the real world. Whether it's the smog outside my window or the mysteries of the universe, I use Physics and AI to find answers that aren't in the back of the textbook.
+            </p>
+        </div>
+
+        <!-- WORKS -->
+        <div class="section-header reveal">
+            <span class="section-title">My Works (Just Yet)</span>
+            <span class="section-number">02</span>
+        </div>
+        
+        <div class="grid-works">
+            
+            <!-- Project 1 -->
+            <a href="https://zenodo.org/records/17943112" target="_blank" class="work-card reveal magnet-target">
+                <div>
+                    <span class="badge">THEORY // 2025</span>
+                    <h3 class="work-title">Dimensional Memory Encoding</h3>
+                    <p class="work-desc">
+                        Ever see a traffic jam where the road is clear, but everyone is still stopped? That's a 'phantom jam'—the system <em>remembering</em> a mistake from ten minutes ago. My research shows the universe does the exact same thing. Chaos isn't just noise; it’s a hard drive storing ghosts of the past in pressure waves. I found the math to read them.
+                    </p>
+                </div>
+                <div class="btn-text">ACCESS PAPER [CLICK HERE]</div>
+            </a>
+
+            <!-- Project 2 -->
+            <div class="work-card reveal magnet-target">
+                <div>
+                    <span class="badge">APPLIED SCIENCE // PROTOTYPE</span>
+                    <h3 class="work-title">Pollution Eating Paint</h3>
+                    <p class="work-desc">
+                        We all know what a traffic jam in India smells like. We can't plant forests in every city square, but we have millions of walls. I designed a paint additive that mimics trees—absorbing toxic vehicle fumes (NOx) and neutralizing them. It turns our concrete jungles into passive air purifiers.
+                    </p>
+                </div>
+                <div class="btn-text" style="opacity: 0.5;">DEPLOYMENT PENDING</div>
+            </div>
+
+        </div>
+
+        <p class="teaser reveal">
+            "And this is just what I can show you. There's a lot more going on in the background. I'm just getting started." 😉
+        </p>
+
+        <!-- FOOTER -->
+        <footer class="footer reveal">
+            <p>"FROM BHAWANIPATNA TO THE COSMOS"</p>
+            <p style="margin-top: 1rem;">&copy; 2025 SATYAJIT BEURA</p>
         </footer>
 
     </div>
 
+    <!-- DOCK UI -->
+    <div class="dock">
+        <a href="https://github.com/SatyajitBeura2468" target="_blank" class="dock-icon magnet-target" aria-label="GitHub">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=qfMUiigAAAAJ&hl=en" target="_blank" class="dock-icon magnet-target" aria-label="Scholar">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </a>
+        <a href="https://medium.com/@satyajitbeura/dimensional-memory-encoding-dme-a-theoretical-introduction-fb9a692ce704" target="_blank" class="dock-icon magnet-target" aria-label="Medium">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h20v18H2z"/><path d="M7 7h10v2H7zM7 11h10v2H7zM7 15h6v2H7z"/></svg>
+        </a>
+        <a href="https://orcid.org/0009-0006-4471-2845" target="_blank" class="dock-icon magnet-target" aria-label="ORCID">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+        </a>
+    </div>
+
+    <!-- GOD-TIER JS ENGINE -->
+    <script>
+        // --- PRELOADER SEQUENCE ---
+        window.addEventListener('load', () => {
+            const progress = document.querySelector('.loader-progress');
+            const preloader = document.querySelector('.preloader');
+            const loaderText = document.querySelector('.loader-text');
+            
+            // 1. Progress Bar Animation
+            setTimeout(() => { progress.style.width = '30%'; }, 100);
+            setTimeout(() => { progress.style.width = '70%'; }, 500);
+            setTimeout(() => { progress.style.width = '100%'; }, 1000);
+            
+            // 2. Text Scramble Animation ("Crazy" to Name)
+            const targetText = "SATYAJIT BEURA";
+            // More chaotic characters for the "crazy" phase
+            const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+"; 
+            let iteration = 0;
+            let crazyPhase = 0;
+            
+            const interval = setInterval(() => {
+                // Phase 1: Go Crazy (Pure Random)
+                if (crazyPhase < 20) {
+                    loaderText.innerText = targetText
+                        .split("")
+                        .map(() => chars[Math.floor(Math.random() * chars.length)])
+                        .join("");
+                    crazyPhase++;
+                } 
+                // Phase 2: Resolve to Name
+                else {
+                    loaderText.innerText = targetText
+                        .split("")
+                        .map((letter, index) => {
+                            if(index < iteration) return targetText[index];
+                            return chars[Math.floor(Math.random() * chars.length)];
+                        })
+                        .join("");
+                    
+                    if(iteration >= targetText.length) {
+                        clearInterval(interval);
+                    }
+                    iteration += 1 / 3; // Controls speed of resolution
+                }
+            }, 40);
+
+            // 3. Fade Out
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                setTimeout(() => { preloader.style.display = 'none'; revealElements(); }, 800);
+            }, 2500); // Wait for name to finish resolving
+        });
+
+        // --- INTERSECTION OBSERVER (Scroll Reveals) ---
+        function revealElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // --- HACKER TEXT EFFECT ---
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.querySelectorAll('[data-scramble], .glitch-text').forEach(target => {
+            target.onmouseover = event => {
+                let iteration = 0;
+                clearInterval(event.target.interval);
+                
+                // Get the original text from data-text attribute, fallback to innerText if missing
+                const originalText = event.target.dataset.text || event.target.innerText;
+                
+                event.target.interval = setInterval(() => {
+                    event.target.innerText = originalText
+                        .split("")
+                        .map((letter, index) => {
+                            if(index < iteration) return originalText[index];
+                            return letters[Math.floor(Math.random() * 26)];
+                        })
+                        .join("");
+                    
+                    if(iteration >= originalText.length) clearInterval(event.target.interval);
+                    iteration += 1 / 3;
+                }, 30);
+            }
+        });
+
+        // --- STARFIELD CANVAS (Deep Space Parallax) ---
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let width, height, stars = [];
+
+        function initStars() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            stars = [];
+            for(let i=0; i<150; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    z: Math.random() * 2, // Depth
+                    o: Math.random(), // Opacity
+                    s: Math.random() * 1.5 // Size
+                });
+            }
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, width, height);
+            stars.forEach(star => {
+                // Parallax movement based on scroll
+                let y = (star.y - window.scrollY * (star.z * 0.2)) % height;
+                if(y < 0) y += height;
+                
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.o})`;
+                ctx.beginPath();
+                ctx.arc(star.x, y, star.s, 0, Math.PI*2);
+                ctx.fill();
+            });
+            requestAnimationFrame(animateStars);
+        }
+
+        window.addEventListener('resize', initStars);
+        initStars();
+        animateStars();
+
+        // --- MAGNETIC CURSOR ---
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        const targets = document.querySelectorAll('.magnet-target, a, button');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            // Smooth follow for outer ring
+            cursor.animate({ left: `${x}px`, top: `${y}px` }, { duration: 500, fill: "forwards" });
+            // Instant follow for dot
+            cursorDot.style.left = `${x}px`;
+            cursorDot.style.top = `${y}px`;
+        });
+
+        // Card Spotlight Effect
+        document.querySelectorAll('.work-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+
+        // Add magnetic class hover state
+        targets.forEach(target => {
+            target.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
+            target.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+        });
+
+    </script>
 </body>
 </html>
