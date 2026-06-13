@@ -84,9 +84,9 @@ export default function Navbar() {
             <li key={l.href}>
               <a
   href={l.href}
-  onClick={(event) => scrollToSection(event, l.href)}
-  className={`relative rounded-full px-3 py-1.5 text-sm transition-colors ${
-    active === l.href.slice(1) ? 'text-star' : 'text-muted hover:text-star'
+  onClick={(event) => scrollToSection(event, l.href, () => setOpen(false))}
+  className={`block rounded-lg px-3 py-2.5 ${
+    active === l.href.slice(1) ? 'bg-cosmic/20 text-star' : 'text-muted'
   }`}
 >
                 {l.label}
@@ -117,9 +117,10 @@ export default function Navbar() {
           ))}
 
           <a
-            href="#lab"
-            className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cosmic to-violet px-4 py-2 text-sm font-medium text-star transition hover:shadow-[0_0_24px_rgba(37,99,235,.5)]"
-          >
+  href="#lab"
+  onClick={(event) => scrollToSection(event, '#lab')}
+  className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cosmic to-violet px-4 py-2 text-sm font-medium text-star transition hover:shadow-[0_0_24px_rgba(37,99,235,.5)]"
+>
             <Rocket size={15} /> Launch Lab
           </a>
         </div>
