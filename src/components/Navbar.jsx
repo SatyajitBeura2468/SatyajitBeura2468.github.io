@@ -67,7 +67,11 @@ export default function Navbar() {
         aria-label="Main navigation"
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8"
       >
-        <a href="#home" className="group flex items-center gap-3">
+        <a
+  href="#home"
+  onClick={(event) => scrollToSection(event, '#home')}
+  className="group flex items-center gap-3"
+>
           <span className="font-heading text-lg font-bold tracking-tight">Satyajit Beura</span>
           <span className="chip hidden sm:inline-flex">
             <span className="h-1.5 w-1.5 rounded-full bg-nebula animate-pulse-soft" />
@@ -79,11 +83,12 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
-                className={`relative rounded-full px-3 py-1.5 text-sm transition-colors ${
-                  active === l.href.slice(1) ? 'text-star' : 'text-muted hover:text-star'
-                }`}
-              >
+  href={l.href}
+  onClick={(event) => scrollToSection(event, l.href)}
+  className={`relative rounded-full px-3 py-1.5 text-sm transition-colors ${
+    active === l.href.slice(1) ? 'text-star' : 'text-muted hover:text-star'
+  }`}
+>
                 {l.label}
                 {active === l.href.slice(1) && (
                   <motion.span
