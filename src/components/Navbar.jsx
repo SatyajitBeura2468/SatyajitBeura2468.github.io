@@ -10,6 +10,26 @@ const socials = [
   { icon: Fingerprint, href: links.orcid, label: 'ORCID' },
 ]
 
+function scrollToSection(event, href, closeMenu) {
+  event.preventDefault()
+
+  const target = document.querySelector(href)
+
+  if (!target) return
+
+  closeMenu?.()
+
+  const navbarOffset = 76
+  const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarOffset
+
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth',
+  })
+
+  window.history.pushState(null, '', href)
+}
+
 export default function Navbar() {
   const [active, setActive] = useState('home')
   const [open, setOpen] = useState(false)
