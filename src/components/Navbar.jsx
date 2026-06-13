@@ -10,30 +10,40 @@ const socials = [
   { icon: Fingerprint, href: links.orcid, label: 'ORCID' },
 ]
 
-function scrollToSection(event, href, closeMenu) {
-  event.preventDefault()
-
-  const target = document.querySelector(href)
-
-  if (!target) return
-
-  closeMenu?.()
-
-  const navbarOffset = 76
-  const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarOffset
-
-  window.scrollTo({
-    top: targetPosition,
-    behavior: 'smooth',
-  })
-
-  window.history.pushState(null, '', href)
-}
-
 export default function Navbar() {
   const [active, setActive] = useState('home')
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const goToSection = (event, href, closeMobileMenu = false) => {
+    event.preventDefault()
+
+    const sectionId = href.replace('#', '')
+    const target = document.getElementById(sectionId)
+
+    if (!target) return
+
+    if (closeMobileMenu) {
+      setOpen(false)
+    }
+
+    setActive(sectionId)
+
+    window.setTimeout(
+      () => {
+        const navbarOffset = 78
+        const targetTop = target.getBoundingClientRect().top + window.scrollY - navbarOffset
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth',
+        })
+
+        window.history.replaceState(null, '', href)
+      },
+      closeMobileMenu ? 220 : 0
+    )
+  }
 
   useEffect(() => {
     const sections = navLinks.map((l) => document.querySelector(l.href)).filter(Boolean)
@@ -68,10 +78,10 @@ export default function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8"
       >
         <a
-  href="#home"
-  onClick={(event) => scrollToSection(event, '#home')}
-  className="group flex items-center gap-3"
->
+          href="#home"
+          onClick={(event) => goToSection(event, '#home')}
+          className="group flex items-center gap-3"
+        >
           <span className="font-heading text-lg font-bold tracking-tight">Satyajit Beura</span>
           <span className="chip hidden sm:inline-flex">
             <span className="h-1.5 w-1.5 rounded-full bg-nebula animate-pulse-soft" />
@@ -83,12 +93,12 @@ export default function Navbar() {
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
-  href={l.href}
-  onClick={(event) => scrollToSection(event, l.href, () => setOpen(false))}
-  className={`block rounded-lg px-3 py-2.5 ${
-    active === l.href.slice(1) ? 'bg-cosmic/20 text-star' : 'text-muted'
-  }`}
->
+                href={l.href}
+                onClick={(event) => goToSection(event, l.href)}
+                className={`relative rounded-full px-3 py-1.5 text-sm transition-colors ${
+                  active === l.href.slice(1) ? 'text-star' : 'text-muted hover:text-star'
+                }`}
+              >
                 {l.label}
                 {active === l.href.slice(1) && (
                   <motion.span
@@ -117,10 +127,10 @@ export default function Navbar() {
           ))}
 
           <a
-  href="#lab"
-  onClick={(event) => scrollToSection(event, '#lab')}
-  className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cosmic to-violet px-4 py-2 text-sm font-medium text-star transition hover:shadow-[0_0_24px_rgba(37,99,235,.5)]"
->
+            href="#lab"
+            onClick={(event) => goToSection(event, '#lab')}
+            className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cosmic to-violet px-4 py-2 text-sm font-medium text-star transition hover:shadow-[0_0_24px_rgba(37,99,235,.5)]"
+          >
             <Rocket size={15} /> Launch Lab
           </a>
         </div>
@@ -146,15 +156,15 @@ export default function Navbar() {
             <ul className="space-y-1 px-6 py-4">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className={`block rounded-lg px-3 py-2.5 ${
+                  <button
+                    type="button"
+                    onClick={(event) => goToSection(event, l.href, true)}
+                    className={`block w-full rounded-lg px-3 py-2.5 text-left ${
                       active === l.href.slice(1) ? 'bg-cosmic/20 text-star' : 'text-muted'
                     }`}
                   >
                     {l.label}
-                  </a>
+                  </button>
                 </li>
               ))}
 
