@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-space font-body text-star;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-cosmic/40 text-star;
+  }
+
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #050816;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2563eb, #8b5cf6);
+    border-radius: 8px;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .section-shell {
+    @apply relative mx-auto w-full max-w-6xl px-5 py-24 sm:px-8 md:py-32;
+  }
+
+  .mono-label {
+    @apply font-mono text-xs uppercase tracking-[0.28em] text-nebula;
+  }
+
+  .section-title {
+    @apply mt-3 font-heading text-3xl font-bold leading-tight text-star sm:text-4xl md:text-5xl;
+  }
+
+  .section-opening {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg;
+  }
+
+  .chip {
+    @apply glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 font-mono text-[11px] tracking-wider text-muted;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cosmic via-nebula to-violet bg-clip-text text-transparent;
+  }
+}
+
+.aurora-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.aurora-border::before {
+  content: '';
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(37, 99, 235, 0.55) 60deg,
+    rgba(34, 211, 238, 0.45) 120deg,
+    transparent 180deg
+  );
+  animation: border-spin 6s linear infinite;
+}
+
+.aurora-border > .aurora-inner {
+  position: relative;
+  background: #0b1026;
+  border-radius: inherit;
+  margin: 1px;
+  z-index: 1;
+}
+
+@keyframes border-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
