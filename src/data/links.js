@@ -5,13 +5,13 @@ export const links = {
   zenodo: 'https://zenodo.org/records/17943112',
 
   // TODO: Replace with the real Google Scholar profile URL from the current site/repo
-  scholar: 'https://scholar.google.com/',
+  scholar: 'https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=ACrTK9XgVMnsX2amUwuXxOrm70aAoJIv4vbitPLGH9peIRTuSkwqV_oJxF8xVE_WhZmOgiWjEv-3V5EQ2aCOew&user=qfMUiigAAAAJ',
 
   // TODO: Replace with the real ORCID URL from the current site/repo
-  orcid: 'https://orcid.org/',
+  orcid: 'https://orcid.org/my-orcid?orcid=0009-0006-4471-2845',
 
   // TODO: Replace with the real email address once verified
-  email: 'mailto:your-email@example.com',
+  email: 'subhadrarout80@gmail.com',
 }
 
 export const navLinks = [
