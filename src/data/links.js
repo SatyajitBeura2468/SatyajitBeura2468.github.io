@@ -11,7 +11,7 @@ export const links = {
   orcid: 'https://orcid.org/my-orcid?orcid=0009-0006-4471-2845',
 
   // TODO: Replace with the real email address once verified
-  email: 'subhadrarout80@gmail.com',
+email: 'mailto:subhadraout8@gmail.com',
 }
 
 export const navLinks = [
