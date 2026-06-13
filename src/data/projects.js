@@ -89,15 +89,15 @@ export const projects = [
     tags: ['Portfolio', 'Frontend', 'Design', 'Animation', 'Identity'],
     visual: 'orbit',
     buttons: [
-     buttons: [
-  {
-    label: 'View Old Site',
-    href: 'https://satyajitbeura2468.github.io/SatyajitBeura2468.github.io-old/',
-    primary: true,
+      {
+        label: 'View Old Site',
+        href: 'https://satyajitbeura2468.github.io/SatyajitBeura2468.github.io-old/',
+        primary: true,
+      },
+      {
+        label: 'View Repository',
+        href: 'https://github.com/SatyajitBeura2468/SatyajitBeura2468.github.io-old',
+      },
+    ],
   },
-  {
-    label: 'View Repository',
-    href: 'https://github.com/SatyajitBeura2468/SatyajitBeura2468.github.io-old',
-  },
-],
 ]
