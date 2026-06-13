@@ -1,7 +1,7 @@
 export const links = {
   github: 'https://github.com/SatyajitBeura2468',
   medium: 'https://medium.com/@satyajitbeura',
-  oldSite: 'https://satyajitbeura2468.github.io',
+  oldSite: 'https://satyajitbeura2468.github.io/SatyajitBeura2468.github.io-old/',
   zenodo: 'https://zenodo.org/records/17943112',
 
   // TODO: Replace with the real Google Scholar profile URL from the current site/repo
