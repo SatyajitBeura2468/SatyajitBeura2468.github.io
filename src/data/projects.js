@@ -96,7 +96,7 @@ export const projects = [
       },
       {
         label: 'View Repository',
-        href: 'https://github.com/SatyajitBeura2468/SatyajitBeura2468.github.io',
+        href: 'https://satyajitbeura2468.github.io/SatyajitBeura2468.github.io-old/',
       },
     ],
   },
